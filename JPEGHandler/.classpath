@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="lib" path="lib/cis-client-11g.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbutils-1.5.jar"/>
+	<classpathentry kind="lib" path="lib/idcloader.jar"/>
+	<classpathentry kind="lib" path="lib/idcserver.jar"/>
+	<classpathentry kind="lib" path="lib/idcupgrade.jar"/>
+	<classpathentry kind="lib" path="lib/jspserver.jar"/>
+	<classpathentry kind="lib" path="lib/mscJDBCUtility-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

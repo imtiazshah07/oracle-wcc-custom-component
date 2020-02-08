@@ -1,0 +1,30 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+EBSCheckIn service</title></head>
+<body>
+
+<@table EBSCheckIn_Services@>
+<table border=1><caption><strong>Scripts For Custom Services</strong></caption>
+<tr>
+	<td>Name</td><td>Attributes</td><td>Actions</td>
+</tr>
+
+<tr>
+	<td>CHECKIN_NEW</td>
+	<td>ae.ebsCheckIn.component.EBSCheckInService
+		2
+		REDIRECT_TEMPLATE
+		null
+		documents<br>
+		!csUnableToCheckInContentItem</td>
+	<td>3:prepareCheckinSecurity::0:null
+		3:checkSecurity::0:null
+		3:doScriptableAction:checkin_new_subservice_selector:0:null
+		3:prepareRedirect:IdcService=CHECKIN_CONFIRM_FORM&dID=<$dID$>&dDocTitle=<$url(dDocTitle)$>&dDocName=<$url(dDocName)$>&dDocAuthor=<$url(dDocAuthor)$>:0:null</td>
+</tr>
+</table>
+<@end@>
+</body>
+</html>

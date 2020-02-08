@@ -1,0 +1,46 @@
+﻿<?hda version="11.1.1.8.0PSU-2013-09-13 15:21:10Z-r110081" jcharset="UTF8" encoding="utf-8"?>
+@Properties LocalData
+ComponentName=EBSCheckIn
+blDateFormat=dd/MM/yyyy {h:mm[:ss] {aa}[zzz]}!mAM,PM!tAsia/Dubai
+classpath=$COMPONENT_DIR/classes;$COMPONENT_DIR/lib/commons-dbutils-1.5.jar;$COMPONENT_DIR/lib/mscJDBCUtility-1.0.jar;
+classpathorder=$COMPONENT_DIR/lib
+hasPreferenceData=0
+libpath=$COMPONENT_DIR/lib
+preventAdditionalComponentDowngrade=0
+version=2013_11_04(build 1)
+@end
+@ResultSet ClassAliases
+3
+classname
+location
+loadOrder
+@end
+@ResultSet Filters
+4
+type
+location
+parameter
+loadOrder
+validateStandard
+ae.ebsCheckin.component.EBSCheckInComponent
+null
+1
+@end
+@ResultSet ResourceDefinition
+4
+type
+filename
+tables
+loadOrder
+environment
+ebscheckin_environment.cfg
+null
+10
+@end
+@ResultSet MergeRules
+4
+fromTable
+toTable
+column
+loadOrder
+@end

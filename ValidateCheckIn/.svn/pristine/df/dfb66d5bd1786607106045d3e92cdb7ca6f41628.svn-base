@@ -1,0 +1,63 @@
+package ae.validatecheckin.component;
+
+import intradoc.common.ExecutionContext;
+import intradoc.common.ServiceException;
+import intradoc.data.DataBinder;
+import intradoc.data.DataException;
+import intradoc.data.Workspace;
+import intradoc.shared.FilterImplementor;
+
+import intradoc.common.ExecutionContext;
+import intradoc.common.LocaleUtils;
+import intradoc.common.Report;
+import intradoc.common.ServiceException;
+import intradoc.data.DataBinder;
+import intradoc.data.DataException;
+import intradoc.data.DataResultSet;
+import intradoc.data.ResultSet;
+import intradoc.data.Workspace;
+import intradoc.server.Service;
+import intradoc.server.ServiceData;
+import intradoc.server.ServiceManager;
+import intradoc.shared.FilterImplementor;
+import intradoc.shared.SharedObjects;
+import intradoc.shared.UserData;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Properties;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipInputStream;
+//import oracle.apps.fnd.common.VersionInfo;
+
+public class ValidateCheckIn  implements FilterImplementor{
+	//
+	public int doFilter(Workspace ws, DataBinder binder, ExecutionContext cxt)
+			throws DataException, ServiceException {
+		String ridcService  = binder.getLocal("IdcService");
+		if(ridcService.equalsIgnoreCase("CHECKIN_NEW")){
+			Integer duplicate = Integer.parseInt(binder.getLocal("xDuplicateValidation") == null ? "0" : binder.getLocal("xDuplicateValidation"));
+			if(duplicate.intValue() == 0){
+				boolean b = true;
+				if(b)
+					throw new ServiceException(" Document is already checked in.");
+				binder.putLocal("xDuplicateValidation", "1");
+			}	
+		}
+		
+		return FilterImplementor.CONTINUE;
+	}
+	
+	public static void main(String ary[]){
+		System.out.println("Compnent is running..");
+	}
+}

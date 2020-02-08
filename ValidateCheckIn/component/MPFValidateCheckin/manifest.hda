@@ -1,0 +1,17 @@
+﻿<?hda version="11.1.1.8.0PSU-2013-09-13 15:21:10Z-r110081" jcharset="UTF8" encoding="utf-8"?>
+@Properties LocalData
+blDateFormat=dd/MM/yyyy {h:mm[:ss] {aa}}!mAM,PM!tAsia/Dubai
+@end
+@ResultSet Manifest
+2
+entryType
+location
+component
+MPFValidateCheckin/MPFValidateCheckin.hda
+componentExtra
+MPFValidateCheckin/readme.txt
+componentClasses
+MPFValidateCheckin/classes/
+componentLib
+MPFValidateCheckin/lib/
+@end

@@ -1,0 +1,54 @@
+<?cfg jcharset="UTF8"?>
+MyEnvironmentParameter=MyValue
+
+
+AXFJNDI=AXF
+CSDCJNDI=CSDS
+VarificationRequired=xVerificationRequired
+InitiateWorkflow=1
+
+
+#Automatic linking options
+EnableDIS=true
+EnableCapture=true
+EnableWebCheckIn=true
+EnableWorkflow=true
+
+EBS_INSTANCE=EBS_instanceA
+
+#EBS – Managed Attachments variables
+DocumentType=HR,Invoice
+ 
+WCCFields_HR=xEmployeeNumber
+EBSCorresponding_HR=EMPLOYEE_NUMBER
+EBSTable_HR=PER_PEOPLE_F
+EBSPrimaryKey_HR=PERSON_ID
+
+WCCFields_SI=xSalesOrderNumber
+EBSCorresponding_SI=ORDER_NUMBER
+EBSTable_SI=OE_ORDER_HEADERS
+EBSPrimaryKey_SI=HEADER_ID
+
+# Bill Of Entry
+WCCFields_BOE=xBillOfEntryNumber
+EBSCorresponding_BOE=COSTS_HDR_REF
+EBSTable_BOE=XXPO_LANDED_COSTS_HDRS_ALL
+EBSPrimaryKey_BOE=COSTS_HDR_ID
+
+# Sales Invoice (Sales Order)
+WCCFields_SI=xInvoiceNumber
+EBSCorresponding_SI=INVOICE_NUMBER
+EBSTable_SI=XXOM_INVOICE_HEADER
+EBSPrimaryKey_SI=HEADER_ID
+
+
+#WCCFields_PV=
+#EBSCorresponding_PV=
+#EBSTable_PV=AP_CHECKS
+#EBSPrimaryKey_PV=CHECK_ID
+
+ 
+#WCCFields_HRD=InvoiceNumber,VendorNumber
+#EBSCorresponding_Invoice=INVOICE_NUMBER,VENDOR_NUMBER
+#EBSTable_HRD=AP_INVOICES
+#EBSPrimaryKey_HRD=INVOICE_ID
